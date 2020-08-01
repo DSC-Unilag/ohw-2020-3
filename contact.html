@@ -1,43 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contact Us</title>
+        <title>Be kind initiative | Contact</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="./styles/contact-style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body>
-        <header>
-            <button>Home</button>
-        </header>
-
-        <section>
-            <h1>Contact Us<br>
-                <span><h3>Help us make the world a better place</h3></span>
-            </h1>
-            <div class = "contacts">
-                <div>
-                    <h3>+234-8065811581</h3>
-                    <h3>+234-8163456789</h3>
-                    <p>Monday - Friday</p>
-                    <p>8:00am - 6:00pm</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Be kind initiative</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                    <a class="nav-item nav-link active" href="contact.html">Contact <span class="sr-only">(current)</span></a>
                 </div>
-
-                <div>
-                    <h3>SEND US AN E-MAIL :</h3>
-                    <p>you@gmail.com</p>
-                </div>
-
-                <div>
-                    <h3>OFFICE ADDRESS :</h3>
-                    <p>7605 Northwest Parkway<br>
-                       Austin, TX 78736<br>
-                       +234-8065811581
-                    </p> 
-                </div>
-
             </div>
-        </section>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    Hello
+                </div>
+                <div class="col-lg-6">
+                    <section class="card mt-5 pb-5 pr-5 pl-5 text-center">
+                        <h1 class="mt-5">Contact Us<br>
+                            <span><h3>Help us make the world a better place</h3></span>
+                        </h1>
+                        <div class="contacts">
+                            <div class="row">
+                                <h3 class="col-12"><i class="fa fa-phone"></i> Call Us</h3>
+                                <div class="col-6"><p>+234 806 581 1581</p></div>
+                                <div class="col-6"><p>+234 816 345 6789</p></div> 
+                            </div>
+
+                            <div class="row">
+                                <h3 class="col-12"><i class="fa fa-book"></i> Write To Us</h3>
+                                <p class="col-12">example@gmail.com</p>
+                            </div>
+
+                            <div class="row">
+                                <h3 class="col-12"><i class="fa fa-home"></i> OFFICE ADDRESS</h3>
+                                <p class="col-6">7605 Northwest Parkway<br>
+                                   Austin, TX 78736<br>
+                                   +234-8065811581
+                                </p> 
+                                <p class="col-6">Monday - Friday<br>8:00am - 6:00pm</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
