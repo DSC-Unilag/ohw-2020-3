@@ -1,8 +1,15 @@
-// Import express
+// Import packages
 const express = require('express');
-
-// Import morgan
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
 const morgan = require('morgan');
+
+// Load config
+dotenv.config({
+	path: './config/config.env'
+})
+
+connectDB();
 
 // Initiate the app
 const app = express();
@@ -23,17 +30,17 @@ app.use(morgan('dev'));
 
 // Respond to /
 app.get('/', (req, res) => {
-	res.render('index', { title: 'Home'});
+	res.render('index', { title: 'Home', style: 'index-style'});
 });
 
 // Respond to /
 app.get('/about', (req, res) => {
-	res.render('about', { title: 'About'});
+	res.render('about', { title: 'About', style: "about-style"});
 });
 
 // Respond to /contact
 app.get('/contact', (req, res) => {
-	res.render('contact', { title: 'Create'});
+	res.render('contact', { title: 'Contact Us', style: "contact-style"});
 });
 
 app.use((req, res) => {
