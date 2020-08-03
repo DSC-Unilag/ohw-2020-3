@@ -2,7 +2,7 @@ body {
 	background: #7fdbda;
 }
 .bg-light {
-	background: transparent !important;
+	background: inherit !important;
 }
 .carousel-item {
   height: 100vh;
