@@ -43,6 +43,10 @@ app.get('/contact', (req, res) => {
 	res.render('contact', { title: 'Contact Us', style: "contact-style"});
 });
 
+app.post('/contact-form', (req, res) => {
+	console.log(req.body);
+});
+
 app.use((req, res) => {
-	res.status(404).render('404', { title: '404'});
+	res.status(404).render('404', { title: 'Page Not Found'});
 });
