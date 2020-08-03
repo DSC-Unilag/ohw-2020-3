@@ -43,8 +43,13 @@ app.get('/contact', (req, res) => {
 	res.render('contact', { title: 'Contact Us', style: "contact-style"});
 });
 
+app.use(express.urlencoded());
+app.use(express.json());
+
 app.post('/contact-form', (req, res) => {
-	console.log(req.body);
+	console.log(req.body.contact.message);
+	console.log(req.body.contact.name);
+	console.log(req.body.contact.email);
 });
 
 app.use((req, res) => {
