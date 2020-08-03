@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 
 // Respond to /
 app.get('/', (req, res) => {
-	res.render('index', { title: 'Home', blogs});
+	res.render('index', { title: 'Home'});
 });
 
 // Respond to /
@@ -31,9 +31,9 @@ app.get('/about', (req, res) => {
 	res.render('about', { title: 'About'});
 });
 
-// Respond to /blogs/create
-app.get('/blogs/create', (req, res) => {
-	res.render('create', { title: 'Create'});
+// Respond to /contact
+app.get('/contact', (req, res) => {
+	res.render('contact', { title: 'Create'});
 });
 
 app.use((req, res) => {
