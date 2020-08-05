@@ -4,6 +4,16 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const morgan = require('morgan');
 const Contact = require('./models/contact');
+var nodemailer = require('nodemailer');
+
+// Create mail transporter
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'zubairidrisaweda@gmail.com',
+    pass: 'ethene20'
+  }
+});
 
 // Load config
 dotenv.config({
@@ -55,7 +65,21 @@ app.post('/contact-form', (req, res) => {
 	});
 	message.save()
 		   .then((result) => {
-		       res.render('done', { title: 'Thanks For Sharing Your Thoughts', style: 'done-style' });
+		   	   var mailOptions = {
+				  from: req.body.contact.email,
+				  to: 'zubairidrisaweda@gmail.com',
+				  subject: 'Conatct Form Filled',
+				  text: req.body.contact.message
+				};
+
+				transporter.sendMail(mailOptions, function(error, info){
+				  if (error) {
+				    console.log(error);
+				  } else {
+				    console.log('Email sent: ' + info.response);
+				  }
+				});
+				res.render('done', { title: 'Thanks For Sharing Your Thoughts', style: 'done-style' });
 		   })
 		   .catch((err) => console.log(err));
 	// console.log(req.body.contact.message);
