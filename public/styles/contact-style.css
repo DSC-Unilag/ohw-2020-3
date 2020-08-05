@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #7fdbda;
+    font-family:'Poppins', sans-serif;
+}
+
+.bg-light {
+    background: #7fdbda !important;
+}
+
+.card {
+    background: rgba(237, 230, 130, 0.4);
+}
+
+.page-footer {
+	background: #4698c8 !important;
+}

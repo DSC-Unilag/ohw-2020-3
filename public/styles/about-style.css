@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-light {
+    background: #7fdbda !important;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    background: #7fdbda;
+}
+img{
+    max-width: 100%;
+}
+#about-us{
+    padding: 40px 0;
+}
+.about__img{
+    width: 350px;
+    height: 350px;
+}
+.about__header{
+    color: #febf63;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.about__text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ede682;
+}
+@media (max-width: 750px){
+    .about__header{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+.page-footer {
+    background: #4698c8 !important;
+}

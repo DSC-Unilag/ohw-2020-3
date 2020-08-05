@@ -1,0 +1,36 @@
+<%- include('./partials/header') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mt-5">
+                        <img src="images/contact.jpg" alt="" width="400px">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <section class="card pb-5 mb-3 pr-5 pl-5 text-center mt-5">
+                        <h1 class="mt-5">Contact Us<br>
+                            <span><h3>Help us make the world a better place</h3></span>
+                        </h1>
+                        <form action="/contact-form" method="POST">
+                            <div class="row">
+                                <div class="col-lg-6 form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name" name="contact[name]">
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <input type="email" class="form-control" name="contact[email]" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <textarea class="form-control" name="contact[message]" placeholder="Your Message"></textarea>
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <button class="btn btn-primary form-control" type="Submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+<%- include('./partials/footer') %>
