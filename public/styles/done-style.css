@@ -1,0 +1,32 @@
+.card {
+	background: rgba(127, 219, 218, 0.2);
+	width: 100%;
+	margin: 18% auto;
+	padding: 50px;
+	color: #ede682;
+}
+
+h1 {
+	text-transform: capitalize;
+}
+
+body {
+	background-image: url(/images/thanks.jpg);
+	background-size: cover;
+}
+
+.btn-primary {
+	background: #ede682;
+	border-radius: 0px;
+	border-color: #ede682;
+	outline-color: #ede682;
+	color: rgba(127, 219, 218, 1);
+	text-transform: uppercase;
+}
+
+.btn-primary:hover {
+	background: rgba(127, 219, 218, 1);
+	border-color: rgba(127, 219, 218, 1);
+	outline-color: rgba(127, 219, 218, 0.2);
+	color: #ede682;
+}

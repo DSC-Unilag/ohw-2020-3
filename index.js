@@ -3,6 +3,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const morgan = require('morgan');
+const Contact = require('./models/contact');
 
 // Load config
 dotenv.config({
@@ -47,9 +48,19 @@ app.use(express.urlencoded());
 app.use(express.json());
 
 app.post('/contact-form', (req, res) => {
-	console.log(req.body.contact.message);
-	console.log(req.body.contact.name);
-	console.log(req.body.contact.email);
+	const message = new Contact({
+		name: req.body.contact.name ? req.body.contact.name : 'Anonymous',
+		email: req.body.contact.email,
+		message: req.body.contact.message
+	});
+	message.save()
+		   .then((result) => {
+		       res.render('done', { title: 'Thanks For Sharing Your Thoughts', style: 'done-style' });
+		   })
+		   .catch((err) => console.log(err));
+	// console.log(req.body.contact.message);
+	// console.log(req.body.contact.name);
+	// console.log(req.body.contact.email);
 });
 
 app.use((req, res) => {
