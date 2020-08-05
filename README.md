@@ -5,3 +5,6 @@ Be kind initiative is birth with that vision of reaching out to the less privile
 
 ## Site Objective
 It will assist us in reaching out to more persons and help us win some grants that will be useful for our sustainability and operation.
+
+## Website
+https://be-kind.herokuapp.com/
