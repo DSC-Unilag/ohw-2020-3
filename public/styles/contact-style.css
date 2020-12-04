@@ -14,5 +14,9 @@ body{
 }
 
 .page-footer {
-	background: #4698c8 !important;
+    background: rgb(5, 253, 253)!important;
+}
+.motto{
+    color: red;
+    padding-top: 18px;
 }
